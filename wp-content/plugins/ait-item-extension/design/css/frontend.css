@@ -1,0 +1,36 @@
+/**************************************************/
+/*** && ITEM EXTENSION ELEMENT				    ***/
+/**************************************************/
+
+.item-extension-container .field-container			{ display: table; width: 100%; border-spacing: 0; padding: 2px; 
+													-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.item-extension-container .field-content			{ display: table-row; }
+.item-extension-container .field-content div 		{ position: relative; border-bottom: 1px solid rgba(0,0,0,0.07); }
+
+.item-extension-container .field-title,
+.item-extension-container .field-data				{ display: table-cell; padding: 4px 12px; vertical-align: top; 
+													-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+.item-extension-container .field-title				{ padding: 12px 0 12px 20px; width: 24%; }
+.item-extension-container .field-title:before 		{ content: ""; position: absolute; top: 17px;  bottom: 0; right: -18%; border-right: 1px solid rgba(0,0,0,0.07); }
+.item-extension-container .field-title h5			{ margin: 0px; }
+
+.item-extension-container .field-data				{ position: relative; padding: 12px 0 4px 8%; }
+.item-extension-container .field-data p				{ margin: 0px; }
+
+.item-extension-container .field-data i.fa-check	{ color: #a1bf61; }
+.item-extension-container .field-data i.fa-remove	{ color: #d05756; }
+
+/******************************************************************************/
+/* ========================================================================== */
+/* = MAX WIDTH 640px                                                        = */
+/* ========================================================================== */
+/******************************************************************************/
+
+@media all and (max-width: 640px) {
+/* && START 640 */
+	
+	.item-extension-container .field-data			{ padding-left: 50px; }
+
+/* && END 640 */
+}

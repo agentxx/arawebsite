@@ -1,0 +1,228 @@
+# Copyright (C) 2017 AitThemes.Club
+# This file is distributed under the same license as the AIT SysInfo package.
+msgid ""
+msgstr ""
+"Project-Id-Version: AIT SysInfo\n"
+"Report-Msgid-Bugs-To: https://system.ait-themes.club/support/\n"
+"POT-Creation-Date: 2017-01-18 14:00:51+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: AitRequirementsInfoReporter.php:69
+msgid "Current value: %s"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:77 AitRequirementsInfoReporter.php:171
+#: AitRequirementsInfoReporter.php:232
+msgid "Enabled"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:77 AitRequirementsInfoReporter.php:170
+#: AitRequirementsInfoReporter.php:231
+msgid "Disabled"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:81
+msgid "Not tested"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:92
+msgid "Your hosting meets the requirements, there is no issue."
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:108
+msgid "WordPress version"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:112
+msgid "This AIT theme requires WordPress 4.0 or newer."
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:117
+msgid "PHP Version"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:121
+msgid "PHP version must be at least 5.3.1. But we recommend you to switch to the most recent versions of PHP 7, because 5.3 branch reached end of life years ago and is no longer maintained, and you are risking serious security and performance issues."
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:128
+msgid "Memory limit"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:132
+msgid "Memory limit is too low. At least <b>%sMB</b> are needed for the AIT themes and plugins to work properly."
+msgstr ""
+
+#. translators: "wp-content/uploads" is exact path to folder
+#: AitRequirementsInfoReporter.php:137
+msgid "Read/Write permissions for wp-content/uploads folder"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:140
+msgid "Writeable"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:141
+msgid "Unwritable"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:142
+msgid "PHP is not allowed to write to \"wp-content/uploads\" directory"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:146
+msgid "Function flock()"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:149
+msgid "Function <code>flock()</code> is not supported on this filesystem. The AIT theme requires this to process atomic file operations."
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:153
+msgid "Function gzcompress()"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:156
+msgid "Function <code>gzcompress()</code> is not enabled. The AIT theme require it for data backuping process."
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:160
+msgid "Function gzuncompress()"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:163
+msgid "Function <code>gzuncompress()</code> is not enabled. The AIT theme require it for data backuping process."
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:172
+msgid "Configuration directive <code>register_globals</code> is enabled. We recommend this to be disabled for security reasons."
+msgstr ""
+
+#. translators: "Reflection" is the name of the extension
+#: AitRequirementsInfoReporter.php:177
+msgid "Reflection extension"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:180
+msgid "Reflection extension is required."
+msgstr ""
+
+#. translators: "SPL" is the name of the extension
+#: AitRequirementsInfoReporter.php:185
+msgid "SPL extension"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:188
+msgid "SPL extension is required."
+msgstr ""
+
+#. translators: "PCRE" is the name of the extension
+#: AitRequirementsInfoReporter.php:193
+msgid "PCRE extension"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:196 AitRequirementsInfoReporter.php:206
+msgid "Enabled and works properly"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:197
+msgid "Disabled or without UTF-8 support"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:198
+msgid "PCRE extension is required and must support UTF-8."
+msgstr ""
+
+#. translators: "ICONV" is the name of the extension
+#: AitRequirementsInfoReporter.php:203
+msgid "ICONV extension"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:207
+msgid "Disabled or does not work properly"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:208
+msgid "ICONV extension is required and must work properly."
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:215
+msgid "PHP tokenizer is required."
+msgstr ""
+
+#. translators: "Multibyte String" is the name of the extension
+#: AitRequirementsInfoReporter.php:220
+msgid "Multibyte String extension"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:223
+msgid "Multibyte String extension is absent. Some internationalization components may not work properly."
+msgstr ""
+
+#. translators: "Multibyte String" is the name of the extension
+#: AitRequirementsInfoReporter.php:228
+msgid "Multibyte String function overloading"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:233
+msgid "Multibyte String function overloading is enabled. The AIT theme requires this to be disabled. If it is enabled, some string function may not work properly."
+msgstr ""
+
+#. translators: "Multibyte String" is the name of the extension
+#: AitRequirementsInfoReporter.php:238
+msgid "GD/ImageMagick extension"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:241
+msgid "GD and ImageMagick extensions are absent. WordPress requires any of them for image resizing."
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:246
+msgid "Max input variables"
+msgstr ""
+
+#: AitRequirementsInfoReporter.php:250
+msgid "Due to multilingual support in the theme, it is recommended that max_input_vars PHP option in php.ini config file is at least <b>3000</b>."
+msgstr ""
+
+#. translators: %s - the plugin name
+#: AitSysInfo.php:93 AitSysInfo.php:107 AitSysInfo.php:204
+msgid "%s - System Information"
+msgstr ""
+
+#: AitSysInfo.php:151
+msgid "System Information"
+msgstr ""
+
+#: AitSysInfo.php:152
+msgid "Requirements &amp; Troubleshooting"
+msgstr ""
+
+#: AitSysInfo.php:153
+msgid "PHP Information"
+msgstr ""
+
+#: AitSysInfo.php:339
+msgid "Copied!"
+msgstr ""
+
+#: AitSysInfo.php:351
+msgid "Press Ctrl+C to copy"
+msgstr ""
+
+#: AitSysInfo.php:467
+msgid "View"
+msgstr ""
+
+#: AitSysInfoReporter.php:146
+msgid "Copy to clipboard"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Generates useful system information report about your WordPress website for AIT team"
+msgstr ""

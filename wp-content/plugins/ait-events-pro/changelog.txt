@@ -1,0 +1,103 @@
+v1.20, 15.6.2017
+----------------
+- Fix: In some cases event's datetime might not match with local timezone
+
+v1.19, 12.4.2017
+----------------
+- Fix: Custom post type might not be registered in some cases
+
+v1.18, 26.1.2017
+----------------
+- Update: Optimization in events search process
+
+v1.17, 19.1.2017
+-----------------
+- Update: Updated .POT files and translations
+
+v1.16, 21.11.2016
+-----------------
+- Fix: Search Events Pro in radius around geolocation
+
+v1.15, 21.10.2016
+-----------------
+- Fix: Wrong order of events if "date from" was specified
+
+v1.14, 6.10.2016
+----------------
+- Fix: ICS Validation error "lines not delimited"
+- Fix: Plugin will be automatically disabled when theme is switched
+- New: Redesign of plugin admin page
+
+v1.13, 8.9.2016
+---------------
+- Fix: Problem with loading your own MO files
+- Fix: Timezones are now considered
+
+
+v1.12, 11.08.2016
+-----------------
+- Fix: Events order on item's detail page
+
+
+v1.11, 04.08.2016
+-----------------
+- Added: Admin can change the author of each Event Pro post
+
+
+v1.10, 21.07.2016
+-----------------
+- Update: Updated sql query
+
+
+v1.9, 22.06.2016
+----------------
+- Added: Compatibility features and dependencies for next theme updates (see changelog of certain theme)
+
+
+v1.8, 03.06.2016
+----------------
+- Fix: Compatibility with BusinessFinder+ theme
+- Fix: In edge cases pagebuilder didn't save correctly data for Taxonomy pages
+- Fix: Some corrections in iCal export
+
+
+v1.7, 19.05.2016
+----------------
+- Update: iCal export includes currently running events
+- Update: Export button is hidden if event has already finished
+- Fix: iOS devices tried to download .ics file instead of opening calendar app
+
+
+v1.6, 26.04.2016
+----------------
+- Update: Updated .POT files and translations
+
+
+v1.5, 21.04.2016
+----------------
+- Fix: Settings page was not translated even if  there was translations available via AIT Languages plugin. That issue is fixed now.
+
+
+v1.4, 05.02.2016
+----------------
+- Added: Compatibility for Directory+ theme
+
+
+v1.3, 13.01.2016
+----------------
+- Added: Compatibility for CityGuide theme
+
+
+v1.2, 03.11.2015
+----------------
+- Fix: Problems with activation on child theme
+
+
+v1.1, 29.10.2015
+----------------
+- Fix: Prevent plugin activation with incompatible themes
+
+
+v1.0, 01.10.2015
+---------------
+- Plugin released

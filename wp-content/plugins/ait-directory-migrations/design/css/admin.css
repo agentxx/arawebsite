@@ -1,0 +1,19 @@
+.ait_migration_options .ait-loader.loader-hidden 	{ display: none}
+.ait_migration_options .ait-loader.ait-opt-wrapper	{ position: relative; margin-bottom: 20px; min-width: 100px; min-height: 36px; background: #f7f7f7; }
+.ait_migration_options .ait-loader .loader-status 	{ position: absolute; left: 50%; z-index: 99; width: 40px; margin: 0 0 0 -20px; font-weight: bold; line-height: 36px; color: #888; transition: color 0.4s; }
+
+.ait_migration_options .ait-loader .loader-status.loader-first-letter::first-letter,
+.ait_migration_options .ait-loader .loader-status.loader-all-letter .loader-value,
+.ait_migration_options .ait-loader .loader-status.loader-all 	{color: white}
+
+.ait_migration_options .ait-loader .loader-status .loader-value { margin-right: 5px}
+.ait_migration_options .ait-loader .loader-status .loader-unit	{}
+.ait_migration_options .ait-loader .loader-bar 					{ height: 36px; background: #91BD56; width: 0%; box-shadow: 0 4px 10px rgba(136, 180, 78, 0.35); border-radius: 2px; transition: width 0.4s; }
+
+.ait_migration_options .ait-button .button-title 				{}
+.ait_migration_options .ait-button .button-description 			{font-size: 12px; font-weight: normal;}
+
+.ait_migration_options .alert-warning .ait-migration-timer 		{float: right}
+.ait_migration_options .alert-warning .ait-migration-timer.timer-hidden 	{display: none}
+.ait_migration_options .alert-warning .ait-migration-timer .timer-value 	{font-weight: bold}
+.ait_migration_options .alert-warning .ait-migration-timer .timer-unit 		{margin-left: 5px; text-decoration: underline}

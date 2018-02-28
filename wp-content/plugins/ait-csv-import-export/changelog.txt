@@ -1,0 +1,141 @@
+v2.9, 21.11.2016
+----------------
+- Fix: Problems with export/import of featured images
+
+v2.8, 6.10.2016
+---------------
+- New: Redesign of plugin admin page
+
+v2.7, 8.9.2016
+--------------
+- Fix: Compatibility with CityGuide Theme v2.75
+- New: Now you can update existing Category or Location if you use existing 'slug' or 'name' column in CSV file
+- New: Plugin will announce user if required 'name' column is missing in CSV file
+
+
+v2.6, 22.06.2016
+----------------
+- New: Ability to export/import additional information for item categories and locations
+
+
+v2.5, 02.06.2016
+----------------
+- Fix: New items were not searchable by subtitle or features
+
+
+v2.4, 26.04.2016
+----------------
+- Fix: New items didn't display on taxonomy pages in recent Directory2 version
+
+
+v2.3, 02.03.2016
+----------------
+- Fix: Problem with importing 'draft' items
+
+
+v2.2, 24.11.2015
+----------------
+- New: Export items with "publish" and "draft" status
+- New: Date validation
+- Update: POT file
+
+
+v2.1, 05.11.2015
+----------------
+- Fix: Problem with missing GPS coordinates
+- New: Confirmation message on successful import
+
+v2.0, 29.10.2015
+----------------
+- New: Settings moved to Theme Admin sections (read more in the documentation)
+- New: Language support - you can import/export items with any of available languages
+- New: Bulk import - now you can import bigger files without server failures
+- New: User friendly reporting
+
+v1.17, 03.09.2015
+-----------------
+- Fix: Categories/Locations with the existing slug will not be duplicated but updated (read more in documentation)
+- Fix: category_featured field wasn't added in exported csv if the taxonomy wasn't selected as 'featured'
+
+
+v1.16, 25.08.2015
+-----------------
+- Fix: php syntax error while importing taxonomies
+
+
+v1.15, 19.08.2015
+-----------------
+- Added: Possibility to use "image name" for item's featured image (more details in the documentation)
+- Added: Improved after-import reporting
+
+v1.14, 11.08.2015
+-----------------
+- Fixed: Items with same Title but unique Name/Slug were considered as the same item
+- Added: Admin field desrciptions
+- Updated: POT Translation file
+
+v1.13, 21.07.2015
+-----------------
+- Update: Added custom fields to import export functions
+
+v1.12, 07.07.2015
+-----------------
+- Update: Updated pot translation files
+
+v1.11, 01.07.2015
+-----------------
+- Update: All translations are now handled by AIT Languages plugin
+
+
+v1.10, 09.06.2015
+-----------------
+- Update: Updated all translations - translated some new strings
+- New:  Added new Ukrainian (uk) translation
+
+
+v1.9, 19.05.2015
+----------------
+- Added: New language - Turkish (tr_TR)
+- Updated: All other languages were updated
+
+
+v1.8, 20.4.2015
+---------------
+- Tweak: Internal changes for better maintainability
+
+
+v1.7, 20.3.2015
+----------------
+- Fixed Taxonomy import for items
+
+
+v1.6, 10.3.2015
+----------------
+- Added languages
+
+
+v1.5, 9.2.2015
+----------------
+- Fixed thumbnail import
+- Added update existing posts
+
+
+v1.3, 6.1.2015
+----------------
+- Fixed: missing a line from importType.php (empty import)
+
+
+v1.2, 30.12.2014
+----------------
+- Fixed: multisite import, empty import, import page showing duplicated tables, added better error reporting
+
+
+v1.1, 12.12.2014
+----------------
+- Fixed: Some PHP errors
+- Renamed WP admin menu labels for this plugin
+
+
+v1.0, 09.12.2014
+----------------
+- Plugin release

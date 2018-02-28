@@ -1,0 +1,11 @@
+.search-form-type-2 .pac-container {
+	width: 250px !important;
+}
+
+@media (max-width: 782px) {
+	.search-form-type-2 .pac-container {
+		width: auto !important;
+		left: 20px !important;
+		right: 20px !important;
+	}
+}

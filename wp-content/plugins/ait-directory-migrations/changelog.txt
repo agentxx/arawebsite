@@ -1,0 +1,104 @@
+v2.9, 20.10.2016
+----------------
+- Update: Plugin compatibility 
+
+v2.8, 06.10.2016
+----------------
+- New: Redesign of plugin admin page
+- Update: POT translation files
+
+v2.7, 02.06.2016
+----------------
+- Added: Support for BusinessFinder+ theme
+- Added: Migration of special offers to new format
+
+v2.6, 12.04.2016
+----------------
+- Added: Migration support for foodguide theme
+- Update: Updated POT translation files
+
+v2.5, 22.03.2016
+----------------
+- Fixed: Post WPML translations migration to correct language
+
+v2.4, 04.02.2016
+----------------
+- Updated: Plugin activation, on activation plugin checks for supported themes
+- Updated: Map address, removed characters breaking javascript after migration
+
+v2.3, 21.01.2016
+----------------
+- Updated: Migrating item meta for cityguide theme
+- Added: Maping functions for eventguide theme
+- Fixed: Fixed web address meta option. Automatically adding http:// when missing
+- Fixed: Address conversion to utf-8 encoding
+
+v2.2, 24.11.2015
+----------------
+- Updated: Updated automatic item counts
+- Updated: Updated item queries
+
+v2.1, 12.11.2015
+----------------
+- Updated: Updated log file location
+- Fixed: Admin notices on plugin activation
+
+v2.0, 03.11.2015
+----------------
+- Updated: Plugin refactored
+- Updated: Updated migration functions
+- Updated: Updated ui
+- Added: Migration progress log file
+
+v0.10, 18.8.2015
+----------------
+- Fix: Warning: Invalid argument supplied for foreach() in ait-directory-migrations/admin/migratePage.php on line 255
+- Fix: Icons from Item's Categories and Locations migrates properly now
+- Tweak: UI and UX improvements
+
+
+v0.9, 07.07.2015
+-----------------
+- Update: Updated pot translation files
+
+v0.8, 01.07.2015
+----------------
+- Fixed: Escaping cyrilic characters
+- Update: All translations are now handled by AIT Languages plugin
+
+
+v0.7, 02.06.2015
+----------------
+- Added: Translations in 24 languages
+
+
+v0.6, 21.4.2015
+---------------
+- Tweak: normalized names of files and text domains
+
+
+v0.5, 12.2.2015
+---------------
+- fix: featured images migration
+
+
+v0.4, 10.2.2015
+----------------
+- skip existing post
+- users migration
+
+
+v0.3, 4.2.2012
+---------------
+- reviews migration
+- fixes
+
+
+0.2, 21.1.2015
+--------------
+- update plugin structure
+
+
+v0.1, 16.1.2015
+----------------
+- Plugin release beta version

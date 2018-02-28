@@ -1,0 +1,13 @@
+[info] 1493829156/AitMigration::getUsers/getting not migrated users
+[info] 1493829156/AitMigration::getUsers/got 1 users
+[info] 1493829156/AitMigration::filterResultsData/filtering 1 results
+[info] 1493829156/AitMigration::filterResultsData/filtering results by id
+[info] 1493829156/AitMigration::getTerms/getting non migrated terms
+[info] 1493829156/AitMigration::getTerms/got 0 terms
+[info] 1493829156/AitMigration::filterResultsData/filtering 0 results
+[info] 1493829156/AitMigration::filterResultsData/filtering results by id
+[info] 1493829156/AitMigration::getPosts/getting non migrated posts
+[info] 1493829156/AitMigration::getPosts/before wordpress query
+[info] 1493829156/AitMigration::getPosts/got 33 posts
+[info] 1493829156/AitMigration::filterResultsData/filtering 33 results
+[info] 1493829156/AitMigration::filterResultsData/filtering results by id

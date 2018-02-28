@@ -1,0 +1,25 @@
+v2.0.2, 16.6.2017
+-----------------
+- Fix: Improved reporting time
+
+
+v2.0.1, 13.4.2017
+-----------------
+- Fix: Conflict with color picker in the Page Builder
+
+
+v2.0.0, 19.1.2017
+-----------------
+- New: Redesign of plugin admin page
+- New: PHP Information
+- New: Requirements and Troubleshooting
+
+
+v1.0.1, 30.8.2016
+-----------------
+- Fix: Fixed PHP warning in detection of available updates
+
+
+v1.0.0, 11.8.2016
+-----------------
+- Release: Plugin released

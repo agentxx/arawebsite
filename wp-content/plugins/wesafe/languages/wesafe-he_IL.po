@@ -1,0 +1,276 @@
+# Copyright (C) 2012 WeSafe
+# This file is distributed under the same license as the WeSafe package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WeSafe 1.7.0\n"
+"Report-Msgid-Bugs-To: https://www.upress.co.il\n"
+"POT-Creation-Date: 2016-08-02 16:58+0300\n"
+"PO-Revision-Date: 2016-08-02 16:59+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: he_IL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.5\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: wesafe.php:557
+#, php-format
+msgid "[%s] Failed login attempts from whitelisted IP"
+msgstr "[%s] ניסיונות כניסה מ- IP מורשה"
+
+#: wesafe.php:561
+#, php-format
+msgid "[%s] Too many failed login attempts"
+msgstr "[%s] יותר מדי ניסיונות התחברות"
+
+#: wesafe.php:566
+#, php-format
+msgid "%d failed login attempts from IP: %s"
+msgstr "%d ניסיונות התחברות שגויים מהכתובת: %s"
+
+#: wesafe.php:570
+#, php-format
+msgid "Last user attempted: %s"
+msgstr "ניסיון התחברות אחרון אל המשתמש %s"
+
+#: wesafe.php:574
+msgid "IP was NOT blocked because of external whitelist."
+msgstr "ה-IP לא נחסם בגלל רשימה לבנה חיצונית."
+
+#: wesafe.php:647
+msgid "<strong>ERROR</strong>: Too many failed login attempts."
+msgstr "<strong>שגיאה</strong>: יותר מדי ניסיונות כניסה כושלים."
+
+#: wesafe.php:651
+msgid "Please try again later."
+msgstr "אנא נסה שנית מאוחר יותר."
+
+#: wesafe.php:658
+#, php-format
+msgid "Please try again in %d hour."
+msgid_plural "Please try again in %d hours."
+msgstr[0] "אנא נסה שנית בעוד שעה."
+msgstr[1] "אנא נסה שנית בעוד %d שעות."
+
+#: wesafe.php:660
+#, php-format
+msgid "Please try again in %d minute."
+msgid_plural "Please try again in %d minutes."
+msgstr[0] "אנא נסה שנית בעוד דקה."
+msgstr[1] "אנא נסה שנית בעוד %d דקות."
+
+#: wesafe.php:690
+#, php-format
+msgid "<strong>%d</strong> attempt remaining."
+msgid_plural "<strong>%d</strong> attempts remaining."
+msgstr[0] "<strong>ניסיון אחד</strong> נשאר."
+msgstr[1] "<strong>%d</strong> ניסיונות נשארו."
+
+#: wesafe.php:761
+msgid "<strong>ERROR</strong>: Incorrect username or password."
+msgstr "<strong>שגיאה</strong>: שם משתמש או סיסמה לא נכונים."
+
+#: wesafe.php:921
+msgctxt "Internet address"
+msgid "IP"
+msgstr "כתובת IP"
+
+#: wesafe.php:921
+msgid "Tried to log in as"
+msgstr "התחבר בתור"
+
+#: wesafe.php:925 wesafe.php:1058
+msgid "No lockouts yet"
+msgstr "אין נעילות עדיין"
+
+#: wesafe.php:936
+#, php-format
+msgid "%d lockout"
+msgid_plural "%d lockouts"
+msgstr[0] "נעילה אחת"
+msgstr[1] "%d נעילות"
+
+#: wesafe.php:969
+msgid "Cleared IP log"
+msgstr "לוג IP נוקה"
+
+#: wesafe.php:977
+msgid "Reset lockout count"
+msgstr "איפוס מונה נעילות"
+
+#: wesafe.php:985
+msgid "Cleared current lockouts"
+msgstr "נוקתה ספירת הנעילות"
+
+#: wesafe.php:1010
+msgid "Options changed"
+msgstr "ההגדרות עודכנו"
+
+#: wesafe.php:1028
+#, php-format
+msgid "It appears the site is reached directly (from your IP: %s)"
+msgstr "נראה שהגעת לאתר באופן ישיר (כתובת ה- IP שלך: %s)"
+
+#: wesafe.php:1030
+#, php-format
+msgid ""
+"It appears the site is reached through a proxy server (proxy IP: %s, your "
+"IP: %s)"
+msgstr ""
+"נראה שהגעת לאתר מאחורי פרוקסי (כתובת ה- IP של הפרוקסי: %s, כתובת ה- IP שלך: "
+"%s)"
+
+#: wesafe.php:1038
+#, php-format
+msgid ""
+"<strong>Current setting appears to be invalid</strong>. Please make sure it "
+"is correct. Further information can be found <a href=\"%s\" title=\"FAQ"
+"\">here</a>"
+msgstr ""
+"<strong>ההגדרות הנוכחיות לא תקינות</strong>. אנא וודא שכל ההגדרות נכונות. "
+"מידע נוסף תוכל למצוא ב<a href=\"%s\" title=\"שאלות נפוצות\">עמוד השאלות "
+"הנפוצות</a>"
+
+#: wesafe.php:1047
+msgid "WeSafe Settings"
+msgstr "הגדרות WeSafe"
+
+#: wesafe.php:1048
+msgid "Statistics"
+msgstr "סטטיסטיקות"
+
+#: wesafe.php:1053
+msgid "Total lockouts"
+msgstr "סה\"כ נעילות"
+
+#: wesafe.php:1056
+msgid "Reset Counter"
+msgstr "איפוס מונה"
+
+#: wesafe.php:1057
+#, php-format
+msgid "%d lockout since last reset"
+msgid_plural "%d lockouts since last reset"
+msgstr[0] "נעילה אחת מאז איפוס המונה"
+msgstr[1] "%d נעילות מאז איפוס המונה"
+
+#: wesafe.php:1063
+msgid "Active lockouts"
+msgstr "נעילות פעילות"
+
+#: wesafe.php:1065
+msgid "Restore Lockouts"
+msgstr "שחזר נעילות"
+
+#: wesafe.php:1066
+#, php-format
+msgid "%d IP is currently blocked from trying to log in"
+msgstr "%d IP חסומה מניסיונות התחברות"
+
+#: wesafe.php:1072
+msgid "Options"
+msgstr "הגדרות"
+
+#: wesafe.php:1077
+msgid "Lockout"
+msgstr "נעילות"
+
+#: wesafe.php:1082
+msgid "allowed retries"
+msgstr "ניסיונות מאופשרים"
+
+#: wesafe.php:1086
+msgid "Site connection"
+msgstr "קישוריות לאתר"
+
+#: wesafe.php:1092
+msgid "Direct connection"
+msgstr "חיבור ישיר"
+
+#: wesafe.php:1097
+msgid "From behind a reverse proxy"
+msgstr "מאחורי פרוקסי הפוך"
+
+#: wesafe.php:1103
+msgid "Handle cookie login"
+msgstr "ניהול עוגיות התחברות"
+
+#: wesafe.php:1106
+msgid "Yes"
+msgstr "כן"
+
+#: wesafe.php:1108
+msgid "No"
+msgstr "לא"
+
+#: wesafe.php:1112
+msgid "Notify on lockout"
+msgstr "התראה על נעילה"
+
+#: wesafe.php:1116
+msgid "Log IP"
+msgstr "שמור IP בלוג"
+
+#: wesafe.php:1119
+msgid "Email to admin after"
+msgstr "שלח אימייל למנהל לאחר"
+
+#: wesafe.php:1124
+msgid "lockouts"
+msgstr "נעילות"
+
+#: wesafe.php:1129
+msgid "Save"
+msgstr "שמירה"
+
+#: wesafe.php:1136
+msgid "Lockout log"
+msgstr "לוג נעילות"
+
+#: wesafe.php:1141
+msgid "Clear Log"
+msgstr "נקה לוג"
+
+#~ msgid "%d hour"
+#~ msgid_plural "%d hours"
+#~ msgstr[0] "שעה אחת"
+#~ msgstr[1] "%d שעות"
+
+#~ msgid "%d minute"
+#~ msgid_plural "%d minutes"
+#~ msgstr[0] "דקה אחת"
+#~ msgstr[1] "%d דקות"
+
+#~ msgid "%d failed login attempts (%d lockout(s)) from IP: %s"
+#~ msgstr "%d ניסיונות כניסה (%d נעילות) מ- IP: %s"
+
+#~ msgid "IP was blocked for %s"
+#~ msgstr "IP נחסם עקב %s"
+
+#~ msgid "minutes lockout"
+#~ msgstr "דקות נעילה"
+
+#~ msgid "lockouts increase lockout time to"
+#~ msgstr "נעילות מאריכות את זמן הנעילה ב"
+
+#~ msgid "hours"
+#~ msgstr "שעות"
+
+#~ msgid "lockouts trigger network lockout"
+#~ msgstr "נעילות מפעילות נעילת רשת"
+
+#~ msgid "hours until retries are reset"
+#~ msgstr "שעות עד איפוס מספר הנסיונות"
+
+#~ msgid "From behind a reversy proxy"
+#~ msgstr "מאחורי פרוקסי"
+
+#~ msgid "Change Options"
+#~ msgstr "שינוי אפשרויות"

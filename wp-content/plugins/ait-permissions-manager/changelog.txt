@@ -1,0 +1,41 @@
+v1.9, 20.7.2017
+---------------
+- Fix: Fixed capabilities management for Events Pro posts (default wordpress roles have full capabilities, directory type users have limited capabilities)
+
+v1.8, 15.6.2017
+---------------
+- Fix: Fixed missing capabilities for Item Posts, roles with access to Item Posts were unable to manage Item Posts meta data.
+
+v1.7, 04.05.2017
+----------------
+- Added: Taxonomy capabilities for all supported custom post types
+
+v1.6, 13.04.2017
+----------------
+- Fix: Admin notices
+
+v1.5, 06.04.2017
+----------------
+- Fix: Posts custom post type enabled automatically
+- Added: Products custom post type management
+
+v1.4, 02.03.2017
+----------------
+- Added: Items category and location capabilities
+- Update: Item capabilities display
+
+v1.3, 26.01.2017
+----------------
+- Update: POT translation files
+
+v1.2, 12.01.2017
+----------------
+- Added: Management for item custom post type
+
+v1.1, 01.12.2016
+----------------
+- Fix: Admin scripts enqueue hook conditions
+
+v1.0, 02.11.2016
+----------------
+- Plugin release

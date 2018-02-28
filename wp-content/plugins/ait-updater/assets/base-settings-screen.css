@@ -1,0 +1,23 @@
+[v-cloak] { display: none; }
+
+input.ait-field-error,
+input.ait-field-error:focus {
+	color: #d54e21;
+	border-color: #d54e21;
+	box-shadow: 0 0 2px #d54e21;
+}
+
+.ait-updater-error-msg {
+	color: #d54e21;
+	padding: 0.4em 0;
+	opacity: 1;
+	transition: all 0.2s;
+	line-height: inherit;
+}
+
+.ait-updater-error-msg.hidden{
+	opacity: 0;
+	display: block;
+	line-height: 0;
+	transition: all 0.2s;
+}

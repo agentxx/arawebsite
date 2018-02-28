@@ -1,0 +1,9 @@
+v1.1, 19.1.2017
+---------------
+- Fix: Removed double slash from google maps api link
+- Fix: Javascripts might fail if plugin was active on page without Search Form Element
+- Fix: Reset lat and lon when location text removed from input field
+
+v1.0, 1.12.2016
+---------------
+- Plugin Released

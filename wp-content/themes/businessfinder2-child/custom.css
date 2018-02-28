@@ -1,0 +1,67 @@
+/*
+Your custom style
+
+Add your custom styles in this file so it is easier to update the theme.
+*/
+
+.filters-wrap .filter-container-op.filter-order-op {
+    border: none;
+    position: relative;
+    color: #fff;
+}
+.filters-wrap .filter-container-op {
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    position: relative;
+    float: left;
+    background: #f27070;
+    -moz-box-shadow: 0 -2px 0 0 rgba(0,0,0,0.07) inset;
+    -webkit-box-shadow: 0 -2px 0 0 rgba(0,0,0,0.07) inset;
+    box-shadow: 0 -2px 0 0 rgba(0,0,0,0.07) inset;
+    margin-left: 15px;
+}
+.filters-wrap .filters-container-op .content {
+    float: right;
+   /* height: 24px; */
+    text-transform: uppercase;
+}
+/*.filters-wrap .filter-container-op.filter-order-op .content {
+    padding-right: 35px;
+}*/
+.filters-wrap .filter-container-op .content .selected:first-child, .filters-wrap .filter-container-op .content .title {
+    float: left;
+    line-height: 24px;
+    margin-left: 10px;
+    color: #fff;
+}
+.filters-wrap .filter-container-op .content .selected:first-child, .filters-wrap .filter-container-op .content .title, .filters-wrap .sbHolder .sbSelector {
+    font-size: 12px;
+    line-height: 20px;
+}
+.filters-wrap .filter-container-op .content .selected:first-child, .filters-wrap .filter-container-op .content .title {
+    float: left;
+    line-height: 24px;
+    margin-left: 10px;
+    color: #fff;
+}
+.filters-wrap .filter-container-op .content .selected:first-child, .filters-wrap .filter-container-op .content .title, .filters-wrap .sbHolder .sbSelector {
+    font-size: 12px;
+    line-height: 20px;
+}
+.ajax-container-op .content.ajax-loading {
+    opacity: 0.5;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+@media (max-width:500px) {
+    .filters-wrap .filter-container.filter-order .content {
+        padding-right: 0;
+    }
+}
+
+div#item-events {
+    margin: 50px 0;
+}

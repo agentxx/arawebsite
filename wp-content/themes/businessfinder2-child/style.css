@@ -1,0 +1,122 @@
+/*
+Theme Name: BusinessFinder+ Child Theme
+Template: businessfinder2
+Version: 1.0
+Author:
+Author URI:
+Description:
+Tags:
+License: GNU General Public License
+License URI: http://www.gnu.org/licenses/gpl.html
+*/
+.ait-opt-container.ait-opt-posts-main {
+    display: none;
+}
+h3.menu-toggle {
+    font-size: 20px !important;
+}
+.menu-opened .top-bar {
+    display: none;
+}
+.items-container .layout-list .item-thumbnail {
+    width: 30.4%;
+}
+.items-container .layout-list .item-content {
+    margin-left: 30.4%;
+}
+li#menu-item-5207 a {
+    background: #de3c4b;
+}
+li#menu-item-5207-clone a {
+    background-color: #de3c4b;
+}
+.user-info {
+    border-radius: 0 !important;
+    padding: 7px 30px 3px 3px !important;
+}
+.user-panel {
+    border-radius: 0 !important;
+}
+.events-container .layout-list .item .item-thumbnail {
+    width: 22.8% !important;
+}
+.events-container .layout-list .item .item-content {
+    margin-left: 22.8% !important;
+}
+.elm-item-organizer .carousel-container.column-4 .item-box {
+    width: 25%;
+    padding-right: 6px;
+    margin-right: 0;
+}
+.elm-item-organizer-container.column-4.layout-box.carousel-container .item-thumbnail-wrap {
+    min-height: 221px !important;
+}
+.frontend-notification.success.pu-registered.shown {
+    position: fixed;
+    z-index: 99999;
+    width: 100%;
+    top: 20%;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+    height: auto;
+    max-height: 100%;
+    line-height: 1.5;
+    background: none;
+}
+.frontend-notification.success.pu-registered.shown>.grid-main {
+    padding: 25px 12px;
+    background: #0193c5;
+    max-width: 600px;
+}
+.frontend-notification.success.pu-registered.hidden {
+    top: -35%;
+}
+.frontend-notification.success.pu-registered.shown i.fa.fa-check-circle {
+    display: none;
+}
+.frontend-notification.success.pu-registered.shown i.fa.fa-times {
+    padding: 10px 5px;
+}
+.pu-author-name {
+    padding: 7.5px;
+    text-transform: capitalize;
+    font-weight: bold;
+    text-align: center;
+    background: #1c2b2e;
+}
+.pu-author-name a {
+    color: white;
+}
+@media (max-width: 640px){
+	.header-container .menu-container,.header-container .nav-menu-main > ul > li > a {
+	    background: #2b3d41;
+	}
+	.nav-menu-main > ul > li {
+    background: #2b3d41;
+    border-bottom: 1px solid #eee;
+	}
+    .elm-item-organizer .carousel-container.column-4 .item-box{
+        width: 100%;
+    }
+    .events-container .layout-list .item .item-thumbnail {
+    width: 100% !important;
+}
+
+}
+@media (max-width: 990px){
+
+.frontend-notification.success.pu-registered.shown {
+    position: fixed;
+    z-index: 99999;
+    width: 100%;
+    top: 30%;
+    text-align: left;
+    font-size: 18px;
+    padding: 20px;
+    height: auto;
+    max-height: 100%;
+    line-height: 1.5;
+}
+
+}

@@ -1,0 +1,88 @@
+# Copyright (C) 2016 AitThemes.Club
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: AIT Directory Migrations\n"
+"Report-Msgid-Bugs-To: https://system.ait-themes.club/support/\n"
+"POT-Creation-Date: 2016-10-04 13:36:23+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: ait-directory-migrations.php:121
+msgid "Settings"
+msgstr ""
+
+#: ait-directory-migrations.php:380 ait-directory-migrations.php:381
+#: ait-directory-migrations.php:396 ait-directory-migrations.php:402
+#: ait-directory-migrations.php:412
+msgid "Migration"
+msgstr ""
+
+#: ait-directory-migrations.php:432 ait-directory-migrations.php:472
+msgid "!!! Important !!!"
+msgstr ""
+
+#: ait-directory-migrations.php:432 ait-directory-migrations.php:472
+msgid "Backup your database before starting the migration process."
+msgstr ""
+
+#: ait-directory-migrations.php:432 ait-directory-migrations.php:472
+msgid "Best way is to make an <strong>SQL dump</strong> of complete database."
+msgstr ""
+
+#: ait-directory-migrations.php:432 ait-directory-migrations.php:472
+msgid "If you aren´t familiar with database backup, please contact your hosting provider."
+msgstr ""
+
+#: ait-directory-migrations.php:434
+msgid "Role Settings"
+msgstr ""
+
+#: ait-directory-migrations.php:465
+msgid "Save Settings"
+msgstr ""
+
+#: ait-directory-migrations.php:480
+msgid "user(s)"
+msgstr ""
+
+#: ait-directory-migrations.php:487
+msgid "term(s)"
+msgstr ""
+
+#: ait-directory-migrations.php:494
+msgid "item(s)"
+msgstr ""
+
+#: ait-directory-migrations.php:501
+msgid "review(s)"
+msgstr ""
+
+#: ait-directory-migrations.php:509
+msgid "special offer(s)"
+msgstr ""
+
+#: ait-directory-migrations.php:515
+msgid "remaining"
+msgstr ""
+
+#: ait-directory-migrations.php:534
+msgid "Migrate"
+msgstr ""
+
+#. translators: %s - link to log file
+#: ait-directory-migrations.php:550
+msgid "Everything was migrated. For more information, check the %s"
+msgstr ""
+
+#: ait-directory-migrations.php:551
+msgid "Congratulations!"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Migrate items, categories, locations from Directory and Business Finder themes to City Guide theme"
+msgstr ""

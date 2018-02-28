@@ -1,0 +1,112 @@
+v1.23, 06.04.2017
+-----------------
+- Fix: XSS Prevention for text input field
+
+v1.22, 02.03.2017
+-----------------
+- Fix: Admin notice
+
+v1.21, 01.12.2016
+-----------------
+- Fix: Compatibility with AIT Languages
+
+v1.20, 20.10.2016
+-----------------
+- Update: Plugin compatibility 
+
+v1.19, 06.10.2016
+-----------------
+- New: Redesign of plugin admin page
+- Update: POT translation files
+
+v1.18, 25.08.2016
+-----------------
+- Fixed: Wrong text domain
+
+v1.17, 14.07.2016
+-----------------
+- Added: Compatibility functions
+
+v1.16, 09.06.2016
+-----------------
+- Fixed: Added multilingual text inputs to base template for clonable input
+- Fixed: Clone input sorting function
+
+v1.15, 02.06.2016
+-----------------
+- Fixed: Admin multilanguage input save, when only one language is displayed in the admin
+
+v1.14, 17.05.2016
+-----------------
+- Fixed: Escaping html in text input type
+
+v1.13, 27.04.2016
+-----------------
+- Fixed: Update function for administrator fields
+
+v1.12, 20.04.2016
+-----------------
+- Updated: Administration for the plugin was updated
+- Updated: Administrator now has full control over the displayed data
+- Updated: Updated POT translation files
+- Fixed: Replaced checkbox input with on-off in the administration
+- Fixed: Now it is possible to define multiple inputs without the values overriding
+- Added: Many options (help, default value, min, max, step) for a single input in package definition
+- Added: Language support for label and help inputs in the administration
+- Added: Section settings for item detail
+- Removed: Item Extension element was removed, data are now part of the item content
+
+v1.11, 15.12.2015
+-----------------
+- Fixed: Admin js tweaks
+
+v1.10, 24.11.2015
+----------------
+- Fixed: Admin javascripts
+
+v1.9, 06.10.2015
+----------------
+- Fixed: Ajax saving function
+
+v1.8, 25.08.2015
+----------------
+- Fixed: Internal errors and notices
+
+v1.7, 11.08.2015
+----------------
+- Fixed: Fronend notices
+
+v1.6, 21.07.2015
+-----------------
+- Updated: Asset paths
+
+v1.5, 07.07.2015
+-----------------
+- Added: Missing textdomains
+- Update: Updated pot translation files
+
+v1.4, 01.07.2015
+----------------
+- Update: All translations are now handled by AIT Languages plugin
+
+
+v1.3, 19.05.2015
+----------------
+- Added: Progressive preloading for item extension element
+- Fixed: Frontend stylesheet load
+
+v1.2, 05.05.2015
+----------------
+- Added: Option to display / hide empty element
+- Updated: Conditions to display element on page
+- Updated: Datepicker option type
+
+
+v1.1, 28.04.2015
+----------------
+- Added: Translations in 24 languages
+
+
+v1.0, 23.04.2015
+----------------
+- Plugin release

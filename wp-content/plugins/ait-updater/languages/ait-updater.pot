@@ -1,0 +1,159 @@
+# Copyright (C) 2017 AitThemes.Club
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: AIT Updater\n"
+"Report-Msgid-Bugs-To: https://system.ait-themes.club/support/\n"
+"POT-Creation-Date: 2017-02-08 16:14:34+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: plugin/Updater/AddPluginsTab.php:195
+msgid "Changelog"
+msgstr ""
+
+#: plugin/Updater/AddThemesTab.php:215
+msgid "Can not get information about %s for installation"
+msgstr ""
+
+#: plugin/Updater/Base.php:66
+msgid "Could not create temporary file."
+msgstr ""
+
+#: plugin/Updater/Plugins.php:55
+msgid "%s could not check updates for plugins. Reason: %s"
+msgstr ""
+
+#: plugin/Updater/Plugins.php:102
+msgid "You did not purchased this plugin. Get access to all plugins, themes and graphics by <a href=\"%s\" target=\"_blank\">purchasing %s</a>."
+msgstr ""
+
+#: plugin/Updater/Plugins.php:262 plugin/Updater/Plugins.php:303
+msgid "Version %s"
+msgstr ""
+
+#: plugin/Updater/Plugins.php:266
+msgid "You do not have sufficient permissions to update plugins on this site."
+msgstr ""
+
+#: plugin/Updater/Plugins.php:312
+msgid "Unable to connect to the filesystem. Please confirm your credentials."
+msgstr ""
+
+#: plugin/Updater/Screens/BaseSettingsScreen.php:76
+msgid "We detected that you probably renamed folder name of the %1$s theme, which you are using as settings theme for the currently active theme. This will cause problems with settings theme updates. The current name of the theme folder is %2$s and has to be %3$s."
+msgstr ""
+
+#: plugin/Updater/Screens/BaseSettingsScreen.php:78
+msgid "We detected that you probably renamed folder name of the currently active <strong>%1$s</strong> theme and this will cause problems with theme updates. The current name of the theme folder is %2$s and has to be %3$s."
+msgstr ""
+
+#: plugin/Updater/Screens/BrandedSettings.php:40
+#: plugin/Updater/Screens/BrandedSettings.php:53
+#: plugin/Updater/Screens/SimpleSettings.php:23
+#: plugin/Updater/Settings.php:161 plugin/Updater/Settings.php:172
+msgctxt "AIT Updater"
+msgid "%s Settings"
+msgstr ""
+
+#: plugin/Updater/Screens/BrandedSettings.php:68
+#: plugin/Updater/Screens/SimpleSettings.php:32
+msgid "AitThemes.Club API Credentials"
+msgstr ""
+
+#: plugin/Updater/Screens/BrandedSettings.php:71
+msgid "Themes &amp; Plugins Backup"
+msgstr ""
+
+#: plugin/Updater/Screens/BrandedSettings.php:128
+#: plugin/Updater/Screens/SimpleSettings.php:57
+#: plugin/Updater/Settings.php:121
+msgid "Username"
+msgstr ""
+
+#: plugin/Updater/Screens/BrandedSettings.php:138
+#: plugin/Updater/Screens/SimpleSettings.php:62
+msgid "Username which you are using to login to AitThemes.club."
+msgstr ""
+
+#: plugin/Updater/Screens/BrandedSettings.php:151
+#: plugin/Updater/Screens/SimpleSettings.php:67
+#: plugin/Updater/Settings.php:124
+msgid "API Key"
+msgstr ""
+
+#. translators: Those %s are opening and closing HTML tags, wrapping that text
+#. between them
+#: plugin/Updater/Screens/BrandedSettings.php:163
+#: plugin/Updater/Screens/SimpleSettings.php:75
+msgid "You can get your API key in your %saccount on AitThemes.club%s."
+msgstr ""
+
+#: plugin/Updater/Screens/BrandedSettings.php:181
+#: plugin/Updater/Screens/SimpleSettings.php:98
+msgid "PHP ZipArchive class for making zip files from PHP is not available, therefore backup option and backuping old versions is not available for you. Please contact server admin."
+msgstr ""
+
+#: plugin/Updater/Screens/BrandedSettings.php:192
+#: plugin/Updater/Screens/SimpleSettings.php:106
+msgid "Do backup"
+msgstr ""
+
+#: plugin/Updater/Screens/BrandedSettings.php:209
+#: plugin/Updater/Screens/SimpleSettings.php:111
+msgid "Whether to do backup of old version plugin or theme before update. Backups will be stored in %s."
+msgstr ""
+
+#: plugin/Updater/Screens/BrandedSettings.php:220
+#: plugin/Updater/Screens/SimpleSettings.php:115
+msgid "List of the old backups"
+msgstr ""
+
+#: plugin/Updater/Screens/BrandedSettings.php:236
+#: plugin/Updater/Screens/SimpleSettings.php:123
+msgid "No backups yet."
+msgstr ""
+
+#: plugin/Updater/Screens/SimpleSettings.php:90
+msgid "Backup"
+msgstr ""
+
+#: plugin/Updater/Settings.php:116
+msgid "You have to enter value to %s"
+msgstr ""
+
+#: plugin/Updater/Settings.php:140
+msgid "Settings saved."
+msgstr ""
+
+#: plugin/Updater/ThemeDirnameFixer.php:34
+msgid "Fix was applied successfuly. You will able to get updates for your %1$s theme"
+msgstr ""
+
+#: plugin/Updater/ThemeDirnameFixer.php:39
+msgid "Renaming was not successful. Failed to rename option keys in the database for the Theme Options and Page Builder."
+msgstr ""
+
+#: plugin/Updater/ThemeDirnameFixer.php:48
+msgid "There was problem with renaming folder %1$s. Most probably it was due to low write permissions. Try to change permissions on the theme folder and run this fix again. Or you can rename it manualy from %1$s to %2$s and run the fix again."
+msgstr ""
+
+#: plugin/Updater/ThemeDirnameFixer.php:54
+msgid "There is folder with name %1$s already. So fix can not continue, because we can not detect what folder it is. Maybe it is some old / empty unused folder. Try rename it to something different then %1$s a run fix again."
+msgstr ""
+
+#: plugin/Updater/Themes.php:58
+msgid "%s could not check updates for themes. Reason: %s"
+msgstr ""
+
+#: plugin/Updater/Themes.php:129
+msgid "You don not have active membership. Please <a href=\"%s\" target=\"_blank\">purchase %s</a> to get access to all themes, plugins and graphics."
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Updater for themes and plugins from AitThemes.Club"
+msgstr ""
