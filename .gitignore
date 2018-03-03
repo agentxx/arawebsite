@@ -6,3 +6,5 @@ wp-config.php
 /wp-content/uploads/cache/
 /wp-content/uploads/backup/
 /wp-content/uploads/backups/
+
+.idea
