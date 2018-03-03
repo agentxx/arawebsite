@@ -8,6 +8,11 @@
          wp_enqueue_style( 'child-style', get_stylesheet_directory_uri().'/style.css', array(), filemtime(get_stylesheet_directory().'/style.css'), 'all' );
     }
     add_action('wp_enqueue_scripts','pu_scripts',100);
+	
+    function pu_scripts_front(){
+        wp_enqueue_script('pu-scripts-front',get_stylesheet_directory_uri().'/pu-scripts-front.js',array('jquery'),filemtime(get_stylesheet_directory().'/pu-scripts-front.js'));
+    }
+    add_action('wp_enqueue_scripts','pu_scripts_front');
 
    
 
