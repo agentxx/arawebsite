@@ -17,6 +17,8 @@ array(
 ),
 ),))}
 
+<?php var_dump($post->id); ?>
+<?php var_dump($GLOBALS['wp_query']->request); ?>
 
 <div id="item-events">
 
