@@ -1,19 +1,20 @@
 {var $eventsProOptions = get_option('ait_events_pro_options', array())}
 {var $eventsCount = $eventsProOptions['sortingDefaultCount']}
-
-
+{var $eventsTermId = 420}
+{var $taxonomy = 'ait-events-pro'}
 
 {var $orderBy = $eventsProOptions['sortingDefaultOrderBy']}
 {var $order = $eventsProOptions['sortingDefaultOrder']}
 
-{if $orderBy == 'eventDate'}
+{* if $orderBy == 'eventDate' *}
 {var $orderBy = 'post__in'}
-{/if}
+
 {var $eventsQuery = AitEventsPro::getEventsByItem($post->id, array('posts_per_page'=>$eventsCount, 'orderby' => $orderBy, 'order' => $order ,'tax_query' => array(
 array(
-'taxonomy' => 'ait-events-pro',
-'field'    => 'slug',
-'terms'    => 'opportunities',
+'taxonomy' => $taxonomy,
+'field'    => 'id',
+'terms'    => $eventsTermId,
+'include_children' => true,
 ),
 ),))}
 

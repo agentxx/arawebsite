@@ -1,24 +1,22 @@
 {var $eventsProOptions = get_option('ait_events_pro_options', array())}
 {var $eventsCount = $eventsProOptions['sortingDefaultCount']}
-
-
+{var $eventsTermId = 414}
+{var $taxonomy = 'ait-events-pro'}
 
 {var $orderBy = $eventsProOptions['sortingDefaultOrderBy']}
 {var $order = $eventsProOptions['sortingDefaultOrder']}
 
-{if $orderBy == 'eventDate'}
-	{var $orderBy = 'post__in'}
-{/if}
+{* if $orderBy == 'eventDate' *}
+{var $orderBy = 'post__in'}
+
 {var $eventsQuery = AitEventsPro::getEventsByItem($post->id, array('posts_per_page'=>$eventsCount, 'orderby' => $orderBy, 'order' => $order ,'tax_query' => array(
 array(
-'taxonomy' => 'ait-events-pro',
-'field'    => 'slug',
-'terms'    => 'exhibitions',
+'taxonomy' => $taxonomy,
+'field'    => 'id',
+'terms'    => $eventsTermId,
+'include_children' => true,
 ),
 ),))}
-
-<?php var_dump($post->id); ?>
-<?php var_dump($GLOBALS['wp_query']->request); ?>
 
 <div id="item-events">
 

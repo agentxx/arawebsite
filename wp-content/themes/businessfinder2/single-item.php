@@ -104,15 +104,11 @@
 			{/if}
 			{* SPECIAL OFFERS SECTION *}
 
-            <?php var_dump($post->id); ?>
-            <?php var_dump(AitEventsPro::getEventsByItem($post->id)->found_posts); ?>
-			<?php var_dump($GLOBALS['wp_query']->request); ?>
-
 			{* UPCOMING EVENTS SECTION *}
 			{if (defined('AIT_EVENTS_PRO_ENABLED')) && AitEventsPro::getEventsByItem($post->id)->found_posts}
 
-            {includePart portal/parts/single-item-events, itemId => $post->id}
-            {includePart portal/parts/single-item-events-op, itemId => $post->id}
+                {includePart portal/parts/single-item-events, itemId => $post->id}
+                {includePart portal/parts/single-item-events-op, itemId => $post->id}
 
 			{/if}
 			{* UPCOMING EVENTS SECTION *}

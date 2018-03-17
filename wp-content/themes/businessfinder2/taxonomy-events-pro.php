@@ -15,7 +15,7 @@
 
 			{if $wp_query->have_posts()}
 
-			{includePart portal/parts/search-filters, postType => 'ait-event-pro', taxonomy => "ait-events-pro", current => $wp_query->post_count, max => $wp_query->found_posts, postCat => $currentCategory->slug}
+			{includePart portal/parts/search-filters, postType => 'ait-event-pro', taxonomy => "ait-events-pro", current => $wp_query->post_count, max => $wp_query->found_posts}
 
 			{if defined("AIT_ADVANCED_FILTERS_ENABLED")}
 				{includePart portal/parts/advanced-filters, query => $wp_query}

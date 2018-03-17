@@ -5,8 +5,6 @@
 {else}
 {var $settings = $options->theme->items}
 {/if}
-{var $postCat = isset($postCat) ? $postCat : ''}
-
 
 {var $filterCounts = array(8, 12, 20)}
 
@@ -35,7 +33,7 @@
     <span class="max">{$max}</span>
     {/capture}
 
-    <h2>{!_x '%1$s Events', 'event pro taxonomy'|printf: $maxLabel}</h2>
+    <h2>{!_x '%1$s %2$s', 'event pro taxonomy'|printf: $maxLabel, get_queried_object()->name}</h2>
     {else}
     <h2>{!_x 'Showing %1$s from %2$s Initiatives', 'item taxonomy'|printf: $current, $max}</h2>
     {/if}
