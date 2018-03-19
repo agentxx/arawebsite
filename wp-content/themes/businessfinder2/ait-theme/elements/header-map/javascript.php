@@ -206,12 +206,12 @@ $window.load(function(){
 		controlDiv.appendChild(disableButton);
 
 		jQuery(this).removeClass('active').html('<i class="fa fa-lock"></i>');
-		map.setOptions({ draggable : false });
+		map.setOptions({ draggable : true });
 
 		google.maps.event.addDomListener(disableButton, 'click', function(e) {
 			if(jQuery(this).hasClass('active')){
 				jQuery(this).removeClass('active').html('<i class="fa fa-lock"></i>');
-				map.setOptions({ draggable : false });
+				map.setOptions({ draggable : true });
 			} else {
 				jQuery(this).addClass('active').html('<i class="fa fa-unlock"></i>');
 				map.setOptions({ draggable : true });

@@ -778,14 +778,17 @@ add_filter( 'ait_search_filter_orderby', function($orderby, $postType = ''){
 function aitGetEventsMarkers($query)
 {
     $markers = array();
+	$themeoptions = aitOptions()->getOptionsByType('theme');
+	$defaultIcon = $themeoptions['items']['categoryDefaultPin'];
+	
     foreach (new WpLatteLoopIterator($query) as $item) {
         $address = aitEventAddress($item, true);
 
         $marker = (object)array(
             'lat'     => $address['latitude'],
             'lng'     => $address['longitude'],
-            // 'title'   => $item->title,
-            'icon'    => '',
+             'title'   => $item->title,
+            'icon'    => $defaultIcon,
             'context' => '',
             'type'    => 'event',
         );
@@ -793,6 +796,52 @@ function aitGetEventsMarkers($query)
     }
     return $markers;
 }
+
+function aitGetEventsMarkersTT($query, $options = array())
+{
+	$markers = array();
+	// find element settings
+	$enableTel = isset($options['enableTel']) ? $options['enableTel'] : false;
+
+	$themeoptions = aitOptions()->getOptionsByType('theme');
+
+	$terms = get_terms( array(
+		'parent' => 0,
+		'taxonomy' => 'ait-items',
+		'hide_empty' => false,
+	) );
+
+	$defaultIcon = $themeoptions['items']['categoryDefaultPin'];
+
+	$termsWithIcons = aitListCategoriesWithIcons($terms, 'ait-items', $defaultIcon);
+
+	foreach (new WpLatteLoopIterator($query) as $item) {
+		$meta = $item->meta('item-data');
+		// meta might me empty or corrupted - ignore such items
+		if (empty($meta) or empty($meta->map)) continue;
+
+		// skip items with [1,1] coordinates
+		if ($meta->map['latitude'] == 1 and $meta->map['longitude'] == 1) {
+			continue;
+		}
+		$context = "";
+		$context = aitRenderItemMarker(array('item'=>$item, 'meta'=>$meta, 'enableTel' => $enableTel, 'options' => $themeoptions));
+		$catData = aitItemCategoriesData($item->id, $defaultIcon, $termsWithIcons);
+		$marker = (object)array(
+			'lat'        => $meta->map['latitude'],
+			'lng'        => $meta->map['longitude'],
+			'title'      => $item->rawTitle,
+			'icon'       => $catData['icon'],
+			'context'    => $context,
+			'type'       => 'item',
+			'data'       => array(),
+		);
+		array_push($markers, $marker);
+	}
+
+	return $markers;
+}
+
 
 function aitGetItemsByRadius($lat, $lng, $radius)
 {

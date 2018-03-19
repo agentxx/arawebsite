@@ -422,7 +422,7 @@ class AitGetItemsAjax extends AitFrontendAjax
 		} else {
 
 			$args = array(
-				'post_type'      => 'ait-item',
+				'post_type'      => 'ait-event-pro',
 				'post_status'	 => 'publish',
 				'posts_per_page' => (int)$_POST['query-data']['ajax']['limit'],
 				'offset'         => (int)$_POST['query-data']['ajax']['offset'],
@@ -431,7 +431,7 @@ class AitGetItemsAjax extends AitFrontendAjax
 				'no_found_rows'  => false
 			);
 			$itemsQuery = new WpLatteWpQuery($args);
-			$markers = aitGetItemsMarkers($itemsQuery, $options);
+			$markers = aitGetEventsMarkers($itemsQuery, $options);
 		}
 
 		$data['found_posts'] = $itemsQuery->found_posts;
