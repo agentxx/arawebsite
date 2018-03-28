@@ -420,18 +420,34 @@ class AitGetItemsAjax extends AitFrontendAjax
 
 		/****** IS NORMAL PAGE ******/
 		} else {
+			
+			if ($_POST['itemType'] === "EVENTS") {
+				$args = array(
+					'post_type'      => 'ait-event-pro',
+					'post_status'	 => 'publish',
+					'posts_per_page' => (int)$_POST['query-data']['ajax']['limit'],
+					'offset'         => (int)$_POST['query-data']['ajax']['offset'],
+					// 'lang'           => AitLangs::getCurrentLanguageCode(),
+					'nopaging'       => false,
+					'no_found_rows'  => false
+				);
+				$itemsQuery = new WpLatteWpQuery($args);
+				$markers = aitGetEventsMarkers($itemsQuery, $options);
+			} else {
+				$args = array(
+					'post_type'      => 'ait-item',
+					'post_status'	 => 'publish',
+					'posts_per_page' => (int)$_POST['query-data']['ajax']['limit'],
+					'offset'         => (int)$_POST['query-data']['ajax']['offset'],
+					// 'lang'           => AitLangs::getCurrentLanguageCode(),
+					'nopaging'       => false,
+					'no_found_rows'  => false
+				);
+				$itemsQuery = new WpLatteWpQuery($args);
+				$markers = aitGetItemsMarkers($itemsQuery, $options);
+			}
+			
 
-			$args = array(
-				'post_type'      => 'ait-event-pro',
-				'post_status'	 => 'publish',
-				'posts_per_page' => (int)$_POST['query-data']['ajax']['limit'],
-				'offset'         => (int)$_POST['query-data']['ajax']['offset'],
-				// 'lang'           => AitLangs::getCurrentLanguageCode(),
-				'nopaging'       => false,
-				'no_found_rows'  => false
-			);
-			$itemsQuery = new WpLatteWpQuery($args);
-			$markers = aitGetEventsMarkers($itemsQuery, $options);
 		}
 
 		$data['found_posts'] = $itemsQuery->found_posts;

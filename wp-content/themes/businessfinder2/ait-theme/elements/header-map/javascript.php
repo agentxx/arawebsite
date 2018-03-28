@@ -33,6 +33,8 @@ $window.load(function(){
 	requestData['globalQueryVars']   = {$globalQueryVars};
 	requestData['query-data']   	  = {$__ait_query_data};
 	requestData['lang']         	  = {AitLangs::getCurrentLanguageCode()};
+	requestData['itemType'] = {$itemType};
+		
 	{if isset($searchQuery)}
 		requestData['search-params'] = {$searchQuery};
 	{/if}

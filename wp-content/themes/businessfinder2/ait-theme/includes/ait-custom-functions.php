@@ -778,18 +778,35 @@ add_filter( 'ait_search_filter_orderby', function($orderby, $postType = ''){
 function aitGetEventsMarkers($query)
 {
     $markers = array();
+	// find element settings
+	$enableTel = isset($options['enableTel']) ? $options['enableTel'] : false;
+	
 	$themeoptions = aitOptions()->getOptionsByType('theme');
+	
 	$defaultIcon = $themeoptions['items']['categoryDefaultPin'];
 	
     foreach (new WpLatteLoopIterator($query) as $item) {
-        $address = aitEventAddress($item, true);
+		$meta = $item->meta('event-pro-data');
+		
+		// meta might me empty or corrupted - ignore such items
+		if (empty($meta) or empty($meta->item)) continue;
+		
+		$itemMeta = get_post_meta($meta->item, '_ait-item_item-data', true);
+		
+		// skip items with [1,1] coordinates
+		if ($meta->map['latitude'] == 1 and $meta->map['longitude'] == 1) {
+			continue;
+		}
+		
+		$context = "";
+		$context = aitRenderItemMarker(array('item'=>$item, 'meta'=>$itemMeta, 'enableTel' => $enableTel, 'options' => $themeoptions));
 
         $marker = (object)array(
-            'lat'     => $address['latitude'],
-            'lng'     => $address['longitude'],
+			'lat'        => $meta->map['latitude'],
+			'lng'        => $meta->map['longitude'],
              'title'   => $item->title,
             'icon'    => $defaultIcon,
-            'context' => '',
+            'context' => $context,
             'type'    => 'event',
         );
         array_push($markers, $marker);
