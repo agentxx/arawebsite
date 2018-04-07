@@ -37,6 +37,7 @@ li#menu-item-5207-clone a {
 .user-panel {
     border-radius: 0 !important;
 }
+.elm-item-organizer.elm-events-pro .layout-list .item .item-thumbnail,
 .events-container .layout-list .item .item-thumbnail {
     width: 22.8% !important;
 }
