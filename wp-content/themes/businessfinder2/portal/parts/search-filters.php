@@ -32,8 +32,8 @@
     {capture $maxLabel}
     <span class="max">{$max}</span>
     {/capture}
-
-    <h2>{!_x '%1$s %2$s', 'event pro taxonomy'|printf: $maxLabel, get_queried_object()->name}</h2>
+	{var $pTitle = get_queried_object()->name? get_queried_object()->name : 'Results'}
+    <h2>{!_x '%1$s %2$s', 'event pro taxonomy'|printf: $maxLabel, $pTitle}</h2>
     {else}
     <h2>{!_x 'Showing %1$s from %2$s Initiatives', 'item taxonomy'|printf: $current, $max}</h2>
     {/if}

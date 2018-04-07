@@ -5,6 +5,17 @@
 	help: "Display or hide this element on page"
 	basic: true
 
+itemType:
+	label: Item Display Type
+	type: select
+	selected: INITIATIVES
+	default:
+		INITIATIVES: Initiatives
+		OPPORTUNITIES: Oportunities
+		EVENTS: Events
+	basic: true
+	help: "Select item types to display in map"
+
 type:
 	label: Type
 	type: select

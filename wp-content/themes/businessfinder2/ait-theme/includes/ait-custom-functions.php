@@ -280,6 +280,128 @@ function aitBuildItemTaxQuery($queryVars, $ignorePagination = false)
 }
 
 
+/**
+* this function can be called in ajax requests
+* do not use any variables out of scope which might be undefined
+* queryVars usually comes from global wp_query->query_vars
+*/
+function aitBuildSearchEventQuery($queryVars, $ignorePagination = false)
+{
+	// global variable which contains all information necessary to build/alter global query
+	// this query must be initialised in ait_alter_search_query callback or in ajax requests
+	global $__ait_query_data;
+	$searchFilters = $__ait_query_data['search-filters'];
+	$advancedFilters = $__ait_query_data['advanced-filters'];
+	$searchParams = $__ait_query_data['search-params'];
+
+	$metaQuery = array();
+	$taxQuery = isset($queryVars['tax_query']) ? $queryVars['tax_query'] : array();
+
+	// if ignore pagination is true that means the request is made from header map element
+	// and all items are required
+	if($ignorePagination){
+		// if limit is set to -1 nopaging must be true otherwise false!
+		$queryVars['posts_per_page'] = (int)$__ait_query_data['ajax']['limit'];
+		$queryVars['offset'] = (int)$__ait_query_data['ajax']['offset'];
+		$queryVars['nopaging'] = false;
+		$queryVars['no_found_rows'] = false;
+	} else {
+		$queryVars['posts_per_page'] = $searchFilters['selectedCount'];
+	}
+
+	// change post_type from default global query
+	$queryVars['post_type'] = 'ait-event-pro';
+	/*$queryVars['suppress_filters'] = false;*/
+
+/*
+	// apply ordering by reviews
+    if (defined('AIT_REVIEWS_ENABLED') and $searchFilters['selectedOrderBy'] == 'rating') {
+        $metaQuery['rating_clause'] = array(
+            'key' => 'rating_mean',
+            'compare' => 'EXISTS'
+        );
+        $searchFilters['selectedOrderBy'] = 'rating_clause';
+    }*/
+
+
+
+	$queryVars['meta_query'] = $metaQuery;
+
+	// add taxonomies parameters from search url to the query
+	if(!empty($searchParams['category'])){
+		array_push($taxQuery, array(
+			'taxonomy' => 'ait-events-pro',
+			'field' => 'term_id',
+			'terms' => $searchParams['category'])
+		);
+	}
+/*
+	if(!empty($searchParams['location'])){
+		array_push($taxQuery, array(
+			'taxonomy' => 'ait-locations',
+			'field' => 'term_id',
+			'terms' => $searchParams['location'])
+		);
+	}*/
+
+	$queryVars['tax_query'] = $taxQuery;
+
+/*
+	// exclude item's excerpt from search by keyword
+	// include item's meta in search by keyword
+	if (!empty($searchParams['s'])) {
+		add_filter('posts_where', 'aitExcludeExcerptFromSearch');
+		add_filter( 'posts_where', 'aitIncludeMetaInSearch' );
+	}
+
+	// apply radius filter
+	if (!empty($searchParams['lat']) && !empty($searchParams['lon']) and !empty($searchParams['rad'])) {
+		$radiusUnits = !empty($searchParams['runits']) ? $searchParams['runits'] : 'km';
+		$radiusValue = !empty($searchParams['rad']) ? $searchParams['rad'] : 100;
+		$radiusValue = $radiusUnits == 'mi' ? $radiusValue * 1.609344 : $radiusValue;
+
+		$filteredByRadiusList = aitGetItemsByRadius($searchParams['lat'], $searchParams['lon'], $radiusValue);
+		if (empty($filteredByRadiusList)) {
+			$filteredByRadiusList = array(0);
+		}
+		$queryVars['post__in'] = $filteredByRadiusList;
+	}
+
+	$queryVars['orderby'] = array(
+		'featured_clause' => 'DESC',
+		$searchFilters['selectedOrderBy'] => $searchFilters['selectedOrder']
+	);
+*/
+/*
+	$queryVars = array(
+		'post_type'      => 'ait-event-pro',
+		'post_status'	 => 'publish',
+		'posts_per_page' => (int)$_POST['query-data']['ajax']['limit'],
+		'offset'         => (int)$_POST['query-data']['ajax']['offset'],
+		// 'lang'           => AitLangs::getCurrentLanguageCode(),
+		'nopaging'       => false,
+		'no_found_rows'  => false,
+		'tax_query' => array(
+			'taxonomy' => 'ait-events-pro',
+			'field' => 'term_id',
+			'terms' => $searchParams['category']
+		)
+	);
+	
+	if($ignorePagination){
+		// if limit is set to -1 nopaging must be true otherwise false!
+		$queryVars['posts_per_page'] = (int)$__ait_query_data['ajax']['limit'];
+		$queryVars['offset'] = (int)$__ait_query_data['ajax']['offset'];
+		$queryVars['nopaging'] = false;
+		$queryVars['no_found_rows'] = false;
+	} else {
+		$queryVars['posts_per_page'] = $searchFilters['selectedCount'];
+	}
+	*/
+
+	return $queryVars;
+}
+
 
 /**
 * this function can be called in ajax requests
@@ -424,11 +546,38 @@ add_filter( 'ait_alter_search_query', function($query){
 	/* IS SEARCH PAGE FOR ITEMS */
 	if(isset($_REQUEST['a']) && $_REQUEST['a'] == true) {
 		$GLOBALS['__ait_query_data']['search-params'] = wp_parse_args($_GET);
-		$args = aitBuildSearchQuery($query->query_vars);
-		foreach($args as $key => $queryVar){
-			$query->set($key, $queryVar);
-		}
+		
+		if ($_REQUEST['item-tax'] === 'ait-events-pro') {
+			$postIn = AitEventsPro::getEventsFromDate(date('Y-m-d H:i:s'));
 
+
+			$query->set('post__in', $postIn);
+			$query->set('posts_per_page', $filterCountsSelected);
+			
+			$query->set('post_type', 'ait-event-pro');
+			$query->set('tax_query', array(
+						'taxonomy' => 'ait-events-pro',
+						'field' => 'term_id',
+						'terms' => $searchParams['category']
+					));
+			
+			//quick fix - this theme doesn't have eventDate option in frontend filter on search page
+			if (in_array($filterOrderBySelected, array('date', 'eventDate'))) {
+				$query->set('orderby', 'post__in');
+			} else {
+				$query->set('orderby', array(
+					$filterOrderBySelected => $filterOrderSelected
+				));
+			}
+			if ($filterOrderSelected == 'DESC') {
+				$query->set('post__in', array_reverse($postIn));
+			}
+		} else {
+			$args = aitBuildSearchQuery($query->query_vars);
+			foreach($args as $key => $queryVar){
+				$query->set($key, $queryVar);
+			}
+		}
 	/* IS ITEM TAXONOMY AND ARCHIVE PAGE */
 	} elseif ($query->is_tax('ait-items') || $query->is_tax('ait-locations') || is_post_type_archive('ait-item')) {
 		$args = aitBuildItemTaxQuery($query->query_vars);

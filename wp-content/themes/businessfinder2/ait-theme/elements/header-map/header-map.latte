@@ -3,6 +3,7 @@
 {var $elmAddress = $el->option('address')}
 
 {var $itemType = $el->option('itemType')}
+{var $taxType = isset($_REQUEST['item-tax']) && $_REQUEST['item-tax'] != "" ? $_REQUEST['item-tax'] : ($itemType === "EVENTS"? 'ait-events-pro': 'ait-items')}
 
 {var $scrollWheel = $el->option(mousewheelZoom) ? "true" : "false"}
 {var $autoZoomAndFit = $el->option('autoZoomAndFit') ? true : false}

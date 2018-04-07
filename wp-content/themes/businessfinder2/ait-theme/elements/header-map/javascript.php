@@ -34,7 +34,8 @@ $window.load(function(){
 	requestData['query-data']   	  = {$__ait_query_data};
 	requestData['lang']         	  = {AitLangs::getCurrentLanguageCode()};
 	requestData['itemType'] = {$itemType};
-		
+	requestData['taxType'] = {$taxType};
+	
 	{if isset($searchQuery)}
 		requestData['search-params'] = {$searchQuery};
 	{/if}

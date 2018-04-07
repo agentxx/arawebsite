@@ -387,7 +387,8 @@ class AitGetItemsAjax extends AitFrontendAjax
 
 		$queryVars['post_status'] = "publish";
 		$queryVars['meta_query'] = array();
-
+		$queryVars['tax_type'] = $_POST['taxType'];
+		
 		$options = array();
 		if(isset($_POST['enableTel'])){
 			$options['enableTel'] = $_POST['enableTel'];
@@ -398,10 +399,30 @@ class AitGetItemsAjax extends AitFrontendAjax
 
 		/******** IS SEARCH PAGE *********/
 		if ($_POST['pageType'] == "search"){
-			$args = aitBuildSearchQuery($queryVars, $ignorePagination);
-			$itemsQuery = new WpLatteWpQuery($args);
-			$markers = aitGetItemsMarkers($itemsQuery, $options);
-
+			if ($_POST['taxType'] === "ait-events-pro") {
+				$searchParams = $queryVars['search-params'];
+				$args = array(
+					'post_type'      => 'ait-event-pro',
+					'post_status'	 => 'publish',
+					'posts_per_page' => (int)$_POST['query-data']['ajax']['limit'],
+					'offset'         => (int)$_POST['query-data']['ajax']['offset'],
+					// 'lang'           => AitLangs::getCurrentLanguageCode(),
+					'nopaging'       => false,
+					'no_found_rows'  => false,
+					'tax_query' => array(
+						'taxonomy' => 'ait-events-pro',
+						'field' => 'term_id',
+						'terms' => $searchParams['category']
+					)
+				);
+				//$args = aitBuildSearchEventQuery($queryVars, $ignorePagination);
+				$itemsQuery = new WpLatteWpQuery($args);
+				$markers = aitGetEventsMarkers($itemsQuery, $options);
+			} else {
+				$args = aitBuildSearchQuery($queryVars, $ignorePagination);
+				$itemsQuery = new WpLatteWpQuery($args);
+				$markers = aitGetItemsMarkers($itemsQuery, $options);
+			}
 		/******** IS AIT TAX PAGE *******/
 		} elseif($_POST['pageType'] == "ait-items") {
 			$args = aitBuildItemTaxQuery($queryVars, $ignorePagination);

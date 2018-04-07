@@ -47,9 +47,10 @@
 	{* TITLE ********** *} {if $wp->isSearch}
 								{if isset($_REQUEST['a']) && $_REQUEST['a'] != ""}
 									{var $sString = array()}
+									{var $taxType = isset($_REQUEST['item-tax']) && $_REQUEST['item-tax'] != "" ? $_REQUEST['item-tax'] : 'ait-items'}
 									{if isset($_REQUEST['s']) && $_REQUEST['s'] != ""}{? array_push($sString, htmlspecialchars($_REQUEST['s']) )}{/if}
 									{if isset($_REQUEST['category']) && $_REQUEST['category'] != ""}
-										{var $dCategory = get_term($_REQUEST['category'], 'ait-items')}
+										{var $dCategory = get_term($_REQUEST['category'], $taxType)}
 										{if isset($dCategory)}{? array_push($sString, $dCategory->name)}{/if}
 									{/if}
 									{if isset($_REQUEST['location']) && $_REQUEST['location'] != ""}

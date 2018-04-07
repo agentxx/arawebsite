@@ -1,6 +1,8 @@
 {*include $element->common('header')*}
 
 {* VARIABLES *}
+{var $itemType = $el->option('itemType')}
+{var $taxType = isset($_REQUEST['item-tax']) && $_REQUEST['item-tax'] != "" ? $_REQUEST['item-tax'] : ($itemType === "EVENTS"? 'ait-events-pro': 'ait-items')}
 {var $type = $el->option('type') != "" ? $el->option('type') : 1}
 
 {var $selectedKey = isset($_REQUEST['s']) && $_REQUEST['s'] != "" ? $_REQUEST['s'] : ''}
@@ -25,11 +27,14 @@
 {/if}
 
 {capture $searchKeyword}
-	<span class="searchinput-wrap"><input type="text" name="s" id="searchinput-text" placeholder="{__ 'Initiative Name'}" class="searchinput" value="{$selectedKey}"></span>
+	{var $placeholder = $taxType === "ait-events-pro"? 'Name' : 'Initiative Name' }
+	<span class="searchinput-wrap"><input type="text" name="s" id="searchinput-text" placeholder="{__ $placeholder}" class="searchinput" value="{$selectedKey}"></span>
 {/capture}
 
 {capture $searchCategory}
-	{var $categories = get_categories(array('taxonomy' => 'ait-items', 'hide_empty' => 0, 'parent' => 0))}
+	{var $currentCategory = get_queried_object()}
+	{var $parentCategory = $currentCategory != false ? $currentCategory->term_id : 0}
+	{var $categories = get_categories(array('taxonomy' => $taxType, 'hide_empty' => 0, 'parent' => $parentCategory))}
 	{if isset($categories) && count($categories) > 0}
 		<div class="category-search-wrap" data-position="first">
 			{if $type == 3}
@@ -43,7 +48,7 @@
 			<select data-placeholder="{__ 'Category'}" name="category" class="category-search default-disabled" style="display: none;">
 			{/if}
 			<option label="-" value="">&nbsp;</option>
-			{!= recursiveCategory($categories, $selectedCat, 'ait-items', "")}
+			{!= recursiveCategory($categories, $selectedCat, $taxType, "")}
 			</select>
 		</div>
 	{/if}
@@ -169,7 +174,7 @@
 
 	<div id="{$htmlId}-container" n:class='search-form-container, "search-type-{$type}"'>
 		<form action="{$searchUrl}" method="get" class="main-search-form">
-
+				<input name="item-tax" type="hidden" value="{$taxType}">
 			<div class="elm-wrapper">
 
 				{if $type == 4}
