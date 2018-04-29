@@ -35,7 +35,7 @@
 	{var $pTitle = get_queried_object()->name? get_queried_object()->name : 'Results'}
     <h2>{!_x '%1$s %2$s', 'event pro taxonomy'|printf: $maxLabel, $pTitle}</h2>
     {else}
-    <h2>{!_x 'Showing %1$s from %2$s Initiatives', 'item taxonomy'|printf: $current, $max}</h2>
+    <h2>{!_x 'Showing %1$s from %2$s Artist-Run Initiatives', 'item taxonomy'|printf: $current, $max}</h2>
     {/if}
     <a href="#" class="ait-toggle-area-btn" data-toggle='[".filters-container", ".advanced-filters-wrap"]'>{__ 'Toggle Filters'}</a>
     <div class="filters-container filters-container-ev ait-toggle-area">
