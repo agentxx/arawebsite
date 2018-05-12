@@ -548,17 +548,18 @@ add_filter( 'ait_alter_search_query', function($query){
 		$GLOBALS['__ait_query_data']['search-params'] = wp_parse_args($_GET);
 		
 		if ($_REQUEST['item-tax'] === 'ait-events-pro') {
-			$postIn = AitEventsPro::getEventsFromDate(date('Y-m-d H:i:s'));
-
+			$postIn = AitEventsPro::getEvents();//getEventsFromDate(date('Y-m-d H:i:s'));
 
 			$query->set('post__in', $postIn);
 			$query->set('posts_per_page', $filterCountsSelected);
 			
 			$query->set('post_type', 'ait-event-pro');
 			$query->set('tax_query', array(
+						array(
 						'taxonomy' => 'ait-events-pro',
 						'field' => 'term_id',
-						'terms' => $searchParams['category']
+						'terms' => $_REQUEST['category']
+						)
 					));
 			
 			//quick fix - this theme doesn't have eventDate option in frontend filter on search page

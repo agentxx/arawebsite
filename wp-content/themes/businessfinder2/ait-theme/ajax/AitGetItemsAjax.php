@@ -400,7 +400,7 @@ class AitGetItemsAjax extends AitFrontendAjax
 		/******** IS SEARCH PAGE *********/
 		if ($_POST['pageType'] == "search"){
 			if ($_POST['taxType'] === "ait-events-pro") {
-				$searchParams = $queryVars['search-params'];
+				$searchParams = $_POST['query-data']['search-params'];
 				$args = array(
 					'post_type'      => 'ait-event-pro',
 					'post_status'	 => 'publish',
@@ -410,9 +410,11 @@ class AitGetItemsAjax extends AitFrontendAjax
 					'nopaging'       => false,
 					'no_found_rows'  => false,
 					'tax_query' => array(
+						array(
 						'taxonomy' => 'ait-events-pro',
 						'field' => 'term_id',
 						'terms' => $searchParams['category']
+						)
 					)
 				);
 				//$args = aitBuildSearchEventQuery($queryVars, $ignorePagination);
