@@ -121,3 +121,25 @@ li#menu-item-5207-clone a {
 }
 
 }
+
+
+.ait-sc-notification.error {
+    background-color: #2b3d42 !important;
+    border-color: #ff9475;
+}
+
+.ait-sc-notification.success {
+    background-color: #2b3d42 !important;
+    border-color: #89cf34;
+}
+
+.ait-sc-notification.info {
+    background-color: #2b3d42 !important;
+    border-color: #54a3d3;
+}
+
+.ait-sc-notification.attention {
+    background-color:#2b3d42 !important;
+    border-color: #f7ec65;
+}
+
